@@ -1,0 +1,69 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            2d:50:30:1d:0e:77:65:37:78:f2:dc:01:9b:13:fa:aa
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C = DE, ST = Baden-Wuerttemberg (BW), L = Stuttgart, O = Deutscher Sparkassen Verlag GmbH, CN = S-TRUST Qualified Root CA 2006-001:PN
+        Validity
+            Not Before: Jan  1 00:00:00 2006 GMT
+            Not After : Dec 30 23:59:59 2010 GMT
+        Subject: C = DE, ST = Baden-Wuerttemberg (BW), L = Stuttgart, O = Deutscher Sparkassen Verlag GmbH, CN = S-TRUST Qualified Signature CA 2006-003:PN
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e6:96:42:4b:3a:09:12:d5:83:71:35:34:c2:ec:
+                    90:ac:5b:39:a2:78:d0:41:15:e6:a6:ad:cc:04:6a:
+                    e5:11:87:22:91:3f:ca:f4:03:dc:91:e2:1d:b0:91:
+                    c9:04:cb:e2:9a:82:8e:2f:e4:b7:96:ef:2d:c5:2e:
+                    28:10:ab:e9:e8:9f:3d:11:f0:a3:54:25:23:94:28:
+                    e5:22:28:53:82:8b:65:e6:86:8d:7a:d2:45:28:cc:
+                    7b:66:38:1e:53:01:53:9d:a4:6d:6c:fa:76:a8:0e:
+                    7f:22:6d:73:45:7b:8f:60:82:aa:0b:d3:09:1c:50:
+                    80:33:a1:87:9b:04:55:4d:6e:b5:7b:50:a2:d7:04:
+                    bd:e1:2b:12:31:e2:1c:96:fd:53:eb:7a:6e:d8:46:
+                    fb:fd:3b:6d:8b:6c:94:d6:10:c4:ce:6f:5a:2a:cc:
+                    39:1e:13:a4:14:83:5f:20:5d:88:40:f9:7d:39:7a:
+                    e8:c4:7a:25:c0:19:fd:d8:3a:b8:a5:f6:05:a2:44:
+                    a2:28:98:59:67:a2:77:2c:fb:aa:30:24:78:da:27:
+                    86:dd:67:58:14:ef:9e:61:4b:cd:2d:a2:08:3c:96:
+                    d9:a1:01:2a:87:9b:c8:9b:5b:e6:44:8a:e8:63:fa:
+                    ac:77:17:9d:18:01:a9:f7:dc:a5:05:3a:7d:53:44:
+                    68:fd
+                Exponent: 2397402239 (0x8ee5747f)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            qcStatements: 
+                0
+0......F..
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://onsitecrl-str.s-trust.de/DeutscherSparkassenVerlagGmbHSTRUSTQualifiedRootCA2006001PN/LatestCRL.crl
+                  URI:ldap://directory-str.s-trust.de/CN=S-TRUST%20Qualified%20Root%20CA%202006-001%3APN,O=Deutscher%20Sparkassen%20Verlag%20GmbH,L=Stuttgart,ST=Baden-Wuerttemberg%20(BW),C=DE?certificateRevocationList;binary
+
+            X509v3 Subject Key Identifier: 
+                4F:ED:A9:67:6E:0E:59:68:9F:D5:B8:34:0F:2D:68:56:CB:E3:89:DB
+            X509v3 Authority Key Identifier: 
+                keyid:A8:57:24:DD:C2:47:F2:64:8A:B9:BA:F0:DF:95:1F:17:1D:D3:DC:C1
+
+    Signature Algorithm: sha1WithRSAEncryption
+         76:21:41:53:42:74:c1:b2:07:2f:28:d9:c9:81:be:aa:97:bb:
+         92:cd:7f:ed:21:1a:0c:f1:4f:5e:8b:23:75:d5:4a:2a:b0:53:
+         88:1a:21:f1:ab:57:60:50:52:c7:ac:8d:66:df:d5:44:07:d7:
+         c2:42:7d:dd:b3:c2:e4:7a:80:c5:20:65:59:da:bd:cd:e5:d1:
+         97:fb:c6:8c:c3:00:1c:ed:25:82:b9:25:3c:d8:40:31:f3:54:
+         29:3a:17:be:fe:ba:6c:ef:52:12:d6:31:a2:6e:df:b4:92:ba:
+         b0:e1:9b:21:96:bb:57:95:33:be:14:07:63:ae:0d:8d:3f:81:
+         18:0e:bc:3e:11:ed:ff:d8:4c:69:d6:e5:61:80:ad:0a:98:94:
+         27:a6:58:06:3a:40:94:19:f1:b9:ba:f1:a9:12:b1:a3:50:e5:
+         8a:29:19:12:f4:ee:a3:f4:d7:00:bb:b4:d6:c1:d9:85:66:7e:
+         2a:77:c0:ed:c7:1a:24:36:23:f8:65:d0:e3:62:0c:26:a1:af:
+         9d:92:ad:a9:7b:28:52:cd:33:ed:35:46:92:e7:6e:38:ae:b4:
+         fe:c7:b1:c7:3c:4c:94:39:a3:59:d4:04:07:5e:c1:24:23:48:
+         e9:b3:b0:98:23:2e:08:5c:42:41:b9:e3:d7:64:0c:d8:82:66:
+         74:a6:ff:4a

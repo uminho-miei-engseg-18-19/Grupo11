@@ -1,0 +1,81 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1041567 (0xfe49f)
+    Signature Algorithm: rsassaPss
+         Hash Algorithm: sha512
+         Mask Algorithm: mgf1 with sha512
+         Salt Length: 0x40
+         Trailer Field: 0xBC (default)
+        Issuer: C = DE, O = D-Trust GmbH, CN = D-TRUST Root CA 1 2017, 2.5.4.97 = NTRDE-HRB74346
+        Validity
+            Not Before: Feb  1 09:22:21 2017 GMT
+            Not After : Feb  1 08:26:48 2032 GMT
+        Subject: C = DE, O = D-Trust GmbH, CN = D-TRUST CA 1-1 2017, 2.5.4.97 = NTRDE-HRB74346
+        Subject Public Key Info:
+            Public Key Algorithm: rsassaPss
+            Unable to load Public Key
+140238339002816:error:0609E09C:digital envelope routines:pkey_set_type:unsupported algorithm:../crypto/evp/p_lib.c:206:
+140238339002816:error:0B09406F:x509 certificate routines:x509_pubkey_decode:unsupported algorithm:../crypto/x509/x_pubkey.c:113:
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:10:2A:A5:47:77:53:32:26:20:ED:73:9C:D5:0D:32:31:EB:66:41:60
+
+            Authority Information Access: 
+                OCSP - URI:http://root-ca-1-2017.ocsp.d-trust.net
+                CA Issuers - URI:http://www.d-trust.net/cgi-bin/D-TRUST_Root_CA_1_2017.crt
+
+            X509v3 Certificate Policies: 
+                Policy: 0.4.0.194112.1.2
+                Policy: 1.3.6.1.4.1.4788.2.100.1
+                  CPS: http://www.d-trust.net/internet/files/D-TRUST_Cloud_PKI_CPS.pdf
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:ldap://directory.d-trust.net/CN=D-TRUST%20Root%20CA%201%202017,O=D-Trust%20GmbH,C=DE?certificaterevocationlist
+
+                Full Name:
+                  URI:http://crl.d-trust.net/crl/d-trust_root_ca_1_2017.crl
+
+            X509v3 Subject Key Identifier: 
+                39:D1:12:38:4D:44:CA:D5:AA:03:99:88:86:93:E8:FE:7F:C5:3D:65
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+    Signature Algorithm: rsassaPss
+         Hash Algorithm: sha512
+         Mask Algorithm: mgf1 with sha512
+         Salt Length: 0x40
+         Trailer Field: 0xBC (default)
+
+         e5:7f:0e:f5:69:a4:cb:13:57:2d:88:aa:8a:04:cc:6e:c4:3e:
+         63:38:69:b6:6f:64:e7:37:cd:0f:e0:f1:ea:3f:56:93:e8:6a:
+         2e:f8:ae:45:f0:59:a2:eb:c7:15:87:ee:04:d8:68:7c:d6:bb:
+         e2:c6:c4:70:e4:57:81:c5:03:45:a5:36:f0:50:0e:08:9f:a3:
+         d0:db:2c:9a:b0:45:72:17:dd:a2:78:68:96:6a:af:ed:fa:58:
+         47:7f:8e:95:44:88:4c:ec:2b:71:62:ac:8e:b9:58:9a:85:96:
+         15:28:fb:f0:3a:25:0f:e7:28:96:a2:be:f8:08:94:b1:cb:4c:
+         c3:23:90:3d:8c:5e:62:69:3b:32:95:6f:b2:4c:fa:87:45:95:
+         3e:e7:80:f0:0a:bc:bd:69:dc:8a:3d:c3:14:ea:d2:b8:31:df:
+         d3:ee:4f:dd:ab:3a:97:db:f8:bd:46:f0:c5:d8:1e:b1:d5:ab:
+         b8:3c:69:57:c3:e0:4a:5e:35:98:51:31:16:50:26:53:05:fe:
+         c0:c9:8d:ed:50:20:11:ee:a0:8a:02:55:f1:82:c3:2f:83:a3:
+         af:15:87:38:06:55:94:44:63:6c:eb:7b:d2:8a:a4:80:72:76:
+         43:16:80:ad:42:07:e8:11:d1:56:e7:96:20:d5:e6:14:ae:81:
+         3d:38:da:61:78:94:c4:eb:46:2f:61:48:84:8f:e2:59:ac:8b:
+         87:b6:8a:74:75:be:de:b7:55:cc:ea:25:f5:51:5e:97:f1:74:
+         9a:50:44:09:dd:b9:71:3f:b0:b6:80:34:5a:17:09:b8:95:15:
+         b5:92:29:6e:13:de:5a:8f:75:e9:57:70:d8:21:1e:08:21:ca:
+         67:ae:e8:8d:89:ff:34:00:c5:dd:1d:ec:c5:8f:dd:10:2a:65:
+         2d:44:57:4b:9f:e2:e5:5a:4e:e9:b4:8f:4b:b8:53:0c:b8:22:
+         01:b1:79:32:3a:cd:c9:7d:64:92:0e:9a:2d:f7:29:88:ca:0c:
+         67:f8:ed:9b:69:9b:dc:f7:f8:bb:ed:97:f8:6f:63:43:a5:64:
+         c9:39:e5:cd:59:3a:6a:59:3e:91:09:83:23:a1:53:8e:45:5e:
+         14:1e:b6:27:9d:0b:d6:3d:2a:19:74:53:79:64:c0:79:d3:b1:
+         55:5d:71:64:60:c3:32:83:25:9c:45:83:e1:fc:54:a4:61:b9:
+         57:2c:3f:ae:1f:aa:9b:42:20:e2:54:7d:31:3a:0a:70:79:5b:
+         f4:fc:8c:5f:78:b4:0e:cc:44:12:94:20:50:01:0f:dd:58:13:
+         4b:16:e5:67:97:c8:66:83:0c:27:fc:fa:89:c7:2d:24:16:b3:
+         10:1b:97:90:09:c4:13:3b
