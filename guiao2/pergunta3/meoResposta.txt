@@ -1,0 +1,44 @@
+[0;36m# general[0m
+[0;32m(gen) banner: SSH-2.0-dropbear_2016.74[0m
+[0;32m(gen) software: Dropbear SSH 2016.74[0m
+[0;32m(gen) compatibility: OpenSSH 3.9-6.6, Dropbear SSH 2013.57+[0m
+[0;32m(gen) compression: disabled[0m
+
+[0;36m# key exchange algorithms[0m
+[0;33m(kex) diffie-hellman-group14-sha1  -- [warn] using weak hashing algorithm[0m
+                                   `- [info] available since OpenSSH 3.9, Dropbear SSH 0.53
+[0;31m(kex) diffie-hellman-group1-sha1   -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm[0m
+[0;31m                                   `- [fail] disabled (in client) since OpenSSH 7.0, logjam attack[0m
+[0;33m                                   `- [warn] using small 1024-bit modulus[0m
+[0;33m                                   `- [warn] using weak hashing algorithm[0m
+                                   `- [info] available since OpenSSH 2.3.0, Dropbear SSH 0.28
+[0;32m(kex) kexguess2@matt.ucc.asn.au    -- [info] available since Dropbear SSH 2013.57[0m
+
+[0;36m# host-key algorithms[0m
+[0;32m(key) ssh-rsa                      -- [info] available since OpenSSH 2.5.0, Dropbear SSH 0.28[0m
+
+[0;36m# encryption algorithms (ciphers)[0m
+[0;32m(enc) aes128-ctr                   -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52[0m
+[0;32m(enc) aes256-ctr                   -- [info] available since OpenSSH 3.7, Dropbear SSH 0.52[0m
+
+[0;36m# message authentication code algorithms[0m
+[0;33m(mac) hmac-sha1                    -- [warn] using encrypt-and-MAC mode[0m
+[0;33m                                   `- [warn] using weak hashing algorithm[0m
+                                   `- [info] available since OpenSSH 2.1.0, Dropbear SSH 0.28
+[0;31m(mac) hmac-md5                     -- [fail] removed (in server) since OpenSSH 6.7, unsafe algorithm[0m
+[0;33m                                   `- [warn] disabled (in client) since OpenSSH 7.2, legacy algorithm[0m
+[0;33m                                   `- [warn] using encrypt-and-MAC mode[0m
+[0;33m                                   `- [warn] using weak hashing algorithm[0m
+                                   `- [info] available since OpenSSH 2.1.0, Dropbear SSH 0.28
+
+[0;36m# algorithm recommendations (for Dropbear SSH 2016.74)[0m
+[0;31m(rec) -diffie-hellman-group1-sha1  -- kex algorithm to remove [0m
+[0;33m(rec) -diffie-hellman-group14-sha1 -- kex algorithm to remove [0m
+[0;32m(rec) +diffie-hellman-group14-sha256-- kex algorithm to append [0m
+[0;32m(rec) +curve25519-sha256@libssh.org-- kex algorithm to append [0m
+[0;32m(rec) +diffie-hellman-group16-sha512-- kex algorithm to append [0m
+[0;32m(rec) +3des-ctr                    -- enc algorithm to append [0m
+[0;32m(rec) +twofish128-ctr              -- enc algorithm to append [0m
+[0;32m(rec) +twofish256-ctr              -- enc algorithm to append [0m
+[0;31m(rec) -hmac-md5                    -- mac algorithm to remove [0m
+
