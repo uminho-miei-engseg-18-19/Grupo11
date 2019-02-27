@@ -33,6 +33,6 @@ As quatro últimas componentes são fornecidas pelo requerente estando as duas �
 
 onde *key.pem* é o ficheiro que contém a chave privada do assinante.
 
-Tendo todas as cinco componentes, o verificador testa se a assinatura é válida e retorna o resultado desse teste.
+Tendo todas as cinco componentes, o verificador executa o programa *verify-app* que recebe como argumentos o certificado do assinante, a mensagem original, a assinatura do assinante e o ficheiro *reqFile.txt*, testa se a assinatura é válida e retorna o resultado desse teste.
 
 (verificador envia o resultado da verificação da assinatura ao requerente)
