@@ -35,10 +35,11 @@ Os dados pessoais devem ser processados no nível mais alto de agregação e com
 - outras técnicas de anonimização.
 
 #### **Estratégias orientadas aos processos**
-##### Estratégia #5: Minimizar
-##### Estratégia #6: Minimizar
-##### Estratégia #7: Minimizar
-##### Estratégia #8: Minimizar
+##### Estratégia #5: Informar
+##### Estratégia #6: Controlar
+##### Estratégia #7: Impor
+##### Estratégia #8: Demonstrar
+
 ### Alínea 3
 
 ### Alínea 4
