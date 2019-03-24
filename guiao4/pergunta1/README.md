@@ -17,6 +17,18 @@ Nesta alínea, o grupo irá de analisar a secção 3.2 do documento "Privacy and
 
 Assim como no documento mencionado, faremos uma distinção entre estratégias orientadas aos dados e estratégias orientadas aos processos.
 #### **Estratégias orientadas aos dados**
+##### Estratégia #1: Minimizar
+A quantidade de dados pessoais possuídos deve estar restrita ao minimo possível. Ao assegurar que nenhum dado desnecessário é recolhido, o possível impacto a nivel de privacidade no sistema é limitado. É necessário por isso garantir que apenas são recolhidos os dados necessários para servir um dado propósito e que não existem meios menos ivasivos de servir esse propósito. Alguns padrões de design são:
+- a seleção apenas dos dados necessários antes da recolha;
+- a anonimização / uso de pseudónimos.
+##### Estratégia #2: Esconder
+Quaisquer dados pessoais, e a sua interrelação, devem encontrar-se "escondidos" de certas pessoas ou entidades. Deste modo, mesmo que alguém sem premissões aceda aos dados armazenados, não consegue facilmente recuperar a informação que se encontra "escondida" nesses dados. Alguns padrões de design são:
+- cifrar os dados (tanto armazenados como em transição);
+- misturar redes para anonimizar padrões de tráfego;
+- anonimizar as entidades e usar pseudónimos para separar os atributos das entidades correspondentes.
+##### Estratégia #3: Separar
+
+##### Estratégia #4: Agregar
 
 #### **Estratégias orientadas aos processos**
 
