@@ -18,27 +18,24 @@ Nesta alínea, o grupo irá de analisar a secção 3.2 do documento "Privacy and
 Assim como no documento mencionado, faremos uma distinção entre estratégias orientadas aos dados e estratégias orientadas aos processos.
 #### **Estratégias orientadas aos dados**
 ##### Estratégia #1: Minimizar
-A quantidade de dados pessoais possuídos deve estar restrita ao minimo possível. Ao assegurar que nenhum dado desnecessário é recolhido, o possível impacto a nivel de privacidade no sistema é limitado. É necessário por isso garantir que apenas são recolhidos os dados necessários para servir um dado propósito e que não existem meios menos ivasivos de servir esse propósito. Alguns padrões de design são:
-- a seleção apenas dos dados necessários antes da recolha;
-- a anonimização / uso de pseudónimos.
+A quantidade de dados pessoais possuídos deve estar restrita ao minimo possível. Ao assegurar que nenhum dado desnecessário é recolhido, o possível impacto a nivel de privacidade no sistema é limitado. É necessário por isso garantir que apenas são recolhidos os dados necessários para servir um dado propósito e que não existem meios menos ivasivos de servir esse propósito.
 ##### Estratégia #2: Esconder
-Quaisquer dados pessoais, e a sua inter-relação, devem encontrar-se "escondidos" de certas pessoas ou entidades. Deste modo, mesmo que alguém sem premissões aceda aos dados armazenados, não consegue facilmente recuperar a informação que se encontra "escondida" nesses dados. Alguns padrões de design são:
-- cifrar os dados (tanto armazenados como em transição);
-- misturar redes para anonimizar padrões de tráfego;
-- anonimizar as entidades e usar pseudónimos para separar os atributos das entidades correspondentes.
+Quaisquer dados pessoais, e a sua inter-relação, devem encontrar-se "escondidos" de certas pessoas ou entidades. Deste modo, mesmo que alguém sem premissões aceda aos dados armazenados, não consegue facilmente recuperar a informação que se encontra "escondida" nesses dados.
 ##### Estratégia #3: Separar
 Dados pessoais devem ser processados e armazenados de forma distribuída, em compartimentos diferentes sempre que possível. Ao separar o processamento e armazenamento das várias fontes de dados pessoais de um determinado indivíduo, não é possível obter o perfil completo dessa pessoa, ou seja, em caso de invasão o atacante não conseguirá obter todos os dados pessoais de um indivíduo. Uma opção passa pela utilização de várias bases de dados não interligadas, onde cada base de dados processa e armazena os dados provenientes de uma fonte diferente. Não existem padrões de design conhecidos.
 ##### Estratégia #4: Agregar
-Os dados pessoais devem ser processados no nível mais alto de agregação e com o mínimo de detalhes possível. Ao restringir a quantidade de detalhe das informações pessoais ou ao considerar essas informações ao nível do grupo, em vez de considerar essas informações para cada pessoa individualmente, essas informações pessoais tornam-se menos sensíveis. Se a informação for suficientemente genérica (informação válida para vários indivíduos) e o tamanho do grupo sobre o qual ela é agregadada for suficientemente grande, apenas é possível atribuir pouca informação a uma determinada pessoa, protegendo assim a sua privacidade. Alguns padrões de design são:
-- agregação ao longo do tempo;
-- granularidade de localização dinâmica de modo a assegurar que um conjunto considerável de pessoas apresenta a mesma localização;
-- outras técnicas de anonimização.
+Os dados pessoais devem ser processados no nível mais alto de agregação e com o mínimo de detalhes possível. Ao restringir a quantidade de detalhe das informações pessoais ou ao considerar essas informações ao nível do grupo, em vez de considerar essas informações para cada pessoa individualmente, essas informações pessoais tornam-se menos sensíveis. Se a informação for suficientemente genérica (informação válida para vários indivíduos) e o tamanho do grupo sobre o qual ela é agregadada for suficientemente grande, apenas é possível atribuir pouca informação a uma determinada pessoa, protegendo assim a sua privacidade.
 
 #### **Estratégias orientadas aos processos**
 ##### Estratégia #5: Informar
+Sempre que os titulares dos dados usem um sistema, devem ser informados sobre quais informações são processadas, com que finalidade e por quais meios. Isto inclui informações sobre as formas de proteção dos dados e transparência sobre a segurança do sistema. Além disso, os titulares dos dados devem ser informados sobre os seus direitos de acesso aos dados e como exercê-los.
 ##### Estratégia #6: Controlar
+
 ##### Estratégia #7: Impor
+Uma política de privacidade compatível com os requisitos legais deve estar em vigor e deve ser aplicada. O nível de proteção da privacidade depende da política atual, que no mínimo deve ser compatível com os requisitos legais. Para tal, devem existir mecanismos de proteção para impedir violações da política de privacidade.
 ##### Estratégia #8: Demonstrar
+O controlador de dados deve demonstrar conformidade com a política de privacidade e com quaisquer requisitos legais aplicáveis, ou seja, o controlador deve provar que está efetivamente a controlar os dados. Em particular, isso exige que o controlador de dados mostre como a política de privacidade é efetivamente implementada no sistema. Em caso de reclamações ou problemas, este deve ser capaz de determinar imediatamente qual é a extensão das possíveis violações de privacidade.
+
 
 ### Alínea 3
 
