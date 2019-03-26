@@ -30,7 +30,7 @@ Os dados pessoais devem ser processados no nível mais alto de agregação e com
 ##### Estratégia #5: Informar
 Sempre que os titulares dos dados usem um sistema, devem ser informados sobre quais informações são processadas, com que finalidade e por quais meios. Isto inclui informações sobre as formas de proteção dos dados e transparência sobre a segurança do sistema. Além disso, os titulares dos dados devem ser informados sobre os seus direitos de acesso aos dados e como exercê-los.
 ##### Estratégia #6: Controlar
-
+Os titulares dos dados devem ser responsáveis pelo processamento dos seus dados pessoais. Por outras palavras, devem ser fornecidos mecanismos ao titular dos dados que na generalidade dos casos lhe permitam, de forma intuitiva e clara, exercer o direito de ver, atualizar e pedir a eliminação dos dados pessoais recolhidos sobre si.
 ##### Estratégia #7: Impor
 Uma política de privacidade compatível com os requisitos legais deve estar em vigor e deve ser aplicada. O nível de proteção da privacidade depende da política atual, que no mínimo deve ser compatível com os requisitos legais. Para tal, devem existir mecanismos de proteção para impedir violações da política de privacidade.
 ##### Estratégia #8: Demonstrar
