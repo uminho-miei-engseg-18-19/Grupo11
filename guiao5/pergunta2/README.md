@@ -24,7 +24,7 @@ Assim sendo, é possível inferir que o tempo médio para a inserção de blocos
 ### Pergunta 2.2
 
 #### Alínea 2.1
-O algoritmo de *proof of work* utilizado começa por atribuir o resultado de incrementar uma unidade ao valor da prova usada para construir o bloco anterior da *blockchain* à variável "incrementor". De seguida incrementa o valor desta variável até este ser divisível por 9 e pelo valor da prova anterior. è possível observar de seguida o pedaço de código responsável por gerar a prova:
+O algoritmo de *proof of work* utilizado começa por atribuir o resultado de incrementar uma unidade ao valor da prova usada para construir o bloco anterior da *blockchain* à variável "incrementor". De seguida incrementa o valor desta variável até este ser divisível por 9 e pelo valor da prova anterior. É possível observar de seguida o excerto de código responsável pela *proof of work*:
 
 ~~~~{.python}
 def proof_of_work(last_proof):
