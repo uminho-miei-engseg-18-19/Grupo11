@@ -19,3 +19,6 @@ Como podemos observar, o programa demorou:
 - 36.648 segundos para o nível de dificuldade 5.
 
 Assim sendo, é possível inferir que o tempo médio para a inserção de blocos aumenta exponêncialmente à medida que aumentamos o nível de dificuldade. De notar que quanto mais zeros forem necessários, menos *nonces* darão o resultado pretendido. Como a única solução para resolver este problema será testar vários *nonces* até obter um que satisfaça os requisitos do tamanho do *hash digest*, ou seja, executar várias funções de hash variando o *nonce*, quanto menos *nonces* satisfizerem os requisitos, mais difícil será encontrar um *nonce* válido. É importante mencionar que no caso acima apresentado, encontrar a solução depende apenas de probabilidades e que nem sempre o nodo com mais poder computacional é aquele que resolve o puzzle primeiro.
+
+
+### Alínea 2.2
