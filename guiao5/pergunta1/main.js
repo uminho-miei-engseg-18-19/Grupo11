@@ -63,8 +63,8 @@ koreCoin.addBlock(new Block (2, "02/01/2018", {amount: 40}));
 koreCoin.addBlock(new Block (3, "02/01/2018", {amount: 40}));
 
 // criado por nos
-koreCoin.addBlock(new Block (4, "25/03/2018", [{amount: 40},{amount:30}]));
-koreCoin.addBlock(new Block (5, "26/03/2018", {amount: 40000}));
+koreCoin.addBlock(new Block (4, "25/03/2018", [{from:A,to:B,amount: 40},{from:C,to:D,amount:30}]));
+koreCoin.addBlock(new Block (5, "26/03/2018", [{from:A,to:D,amount: 40000},{from:E,to:R,amount: 400}]));
 
 
 
