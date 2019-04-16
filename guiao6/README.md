@@ -38,9 +38,9 @@ Para as vulnerabilidades de codificação escolhemos duas clássicas que têm or
 ##### Vulnerabilidade Operacional:
 
 ***Cross Side Scripting* e *Improper XML External Entity Reference***
+
 A primeira vulnerabilidade ocorre quando o input recolhido do utilizador não é devidamente *sanitazed* antes de ser utilizado como um elemento da página web. Resumidamente, este input poderá ser manipulado de maneira a permitir que seja executado código javascript arbitrário no browser do cliente. Esta vulnerabilidade poderá ter consequências graves, como o roubo de cookies, redirecionamento para páginas maliciosas, entre muitas outras. A segunda vulnerabilidade ocorre quando o programa lida com documentos XML. Como um documento XML poder conter *URLs* que se referem a outros documentos extrinsecos, um documento malicioso poderá tentar incorporar um documento incorreto. Esta vulnerabilidade é bastante perigosa porque o documento malicioso poderá, por exemplo, tentar incorporar o documento *file:///etc/passwd* que contem as palavras-passes dos utilizadores, no caso de se tratar de um sistema Unix, ou o *C:\Winnt\win.in*, no caso de um sistema Windows.
 
-
-
 #### Pergunta 1.3
+O termo *zero-day* refere-se a uma vulnerabilidade que foi descoberta muito recentemente. Devido a isso os desenvolvedores do produto afetado ainda não tiveram tempo de criar um patch que resolva essta mesma vulnerabilidade, que possivelmente já estará a ser aproveitada por hackers, para realizarem ataques. Caso o atacante consiga com sucesso realizar um ataque, esse ataque designa-se tamvém *zero day attack*. Estas vulnerabilidades das demais, porque as *non zero* já são falhas conhecidas e já existem mecanismos conhecidos para as mitigarem/resolverem.
 
