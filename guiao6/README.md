@@ -31,9 +31,15 @@ A primeira vulnerabilidade acontece quando existe a recolha de dados do utilizad
 
 ##### Vulnerabilidade de Codificação:
 
-***Stack-based Buffer Overflow* e *Heap-based Buffer Overflow**
+***Stack-based Buffer Overflow* e *Heap-based Buffer Overflow***
 
 Para as vulnerabilidades de codificação escolhemos duas clássicas que têm origem na mesma *fonte*. Ambas contêm no nome a palavra *overflow* visto que derivam do facto de existir um "overflow" de informação lida do utilizador. Geralmente acontecem quando utilizamos linguagens de programação como o C que não valida os acessos à memória e acontece quando, por exemplo, alocamos 20 bytes para leitura de um input e o utilizador coloca mais de 20 bytes.  No caso do *heap-based overflow*, acontece quando ultrapassamos essa barreira, para variaveis que são guardadas na heap, ou seja, variáveis dinámicas, alocadas com a função *malloc(),realloc(),callalloc(),etc*. No caso do *stack overflow* esse esbordamento acontece na manipulação das variáveis locais de uma função (que são guardadas na stack). Este tipo de vulnerabilidade poderá ter consequências graves desde uma alteração do comportamento do programa, *crash* do mesmo, ou poderá mesmo levar a execução arbitrária de código.
+
+##### Vulnerabilidade Operacional:
+
+***Cross Side Scripting* e *Improper XML External Entity Reference***
+A primeira vulnerabilidade ocorre quando o input recolhido do utilizador não é devidamente *sanitazed* antes de ser utilizado como um elemento da página web. Resumidamente, este input poderá ser manipulado de maneira a permitir que seja executado código javascript arbitrário no browser do cliente. Esta vulnerabilidade poderá ter consequências graves, como o roubo de cookies, redirecionamento para páginas maliciosas, entre muitas outras. A segunda vulnerabilidade ocorre quando o programa lida com documentos XML. Como um documento XML poder conter *URLs* que se referem a outros documentos extrinsecos, um documento malicioso poderá tentar incorporar um documento incorreto. Esta vulnerabilidade é bastante perigosa porque o documento malicioso poderá, por exemplo, tentar incorporar o documento *file:///etc/passwd* que contem as palavras-passes dos utilizadores, no caso de se tratar de um sistema Unix, ou o *C:\Winnt\win.in*, no caso de um sistema Windows.
+
 
 
 #### Pergunta 1.3
