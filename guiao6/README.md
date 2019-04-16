@@ -23,6 +23,10 @@ Tendo em conta estas estimativas e o total de linhas do código fonte, inferimos
 
 #### Pergunta 1.2
 
+##### Vulnerabilidade de Projeto:*Improper Input Validation* e *Use of Hard-coded Password*
+
+A primeira vulnerabilidade acontece quando existe a recolha de dados do utilizador. Um exemplo muito tipíco ocorre quando queremos ler um número introduzido pelo utilizador e não validamos o tipo de dados introduzido, podendo ser introduzidas strings, por exemplo. Esta falta de validação poderá levar a uma alteração do *workflow* dos dados, *crash* do sistema ou até mesmo execução de código arbitrário. 
+
 
 #### Pergunta 1.3
 
