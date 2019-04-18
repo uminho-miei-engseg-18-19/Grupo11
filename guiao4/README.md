@@ -39,4 +39,7 @@ O controlador de dados deve demonstrar conformidade com a política de privacida
 
 ### Alínea 3
 
+Feita em ficheiro separado
+
 ### Alínea 4
+Feita em ficheiro separado
