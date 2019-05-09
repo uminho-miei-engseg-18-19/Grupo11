@@ -74,7 +74,8 @@ Aqui podemos ver que o valor do primeiro Long está contido no intervalo dos Int
 Se fossem utilizados scans para o tipo correto em cada um dos casos não seria possível originar um *integer overflow* pois era levantada uma exceção sempre que se tentasse introduzir um valor fora da gama do respetivo tipo. No exemplo anterior, se fossem usados os scans apropriados para cada tipo de inteiros seriam lançadas exceções no input do Byte e do Short.
 
 ### Pergunta 2.1
-**Qual a vulnerabilidade que existe na função ***vulneravel* e quais os efeitos da mesma?**
+
+**Qual a vulnerabilidade que existe na função *vulneravel* e quais os efeitos da mesma?**
 ```c
 void vulneravel (char *matriz, size_t x, size_t y, char valor) {
     int i, j;
@@ -91,11 +92,11 @@ Como podemos verificar, a função *vulneravel* recebe como parâmetros um **x**
 **Complete o main() de modo a demonstrar essa vulnerabilidade.**
 ```c
 int main(int argc, char** argv) {
-	size_t x=18446744073709551615, y=18446744073709551615;	
-	printf("x*y = %zu\n", x*y); 
-	char *matriz;
-	vulneravel(matriz, x, y, 'r');
-	printf("Terminou com sucesso\n");
+    size_t x=18446744073709551615, y=18446744073709551615;	
+    printf("x*y = %zu\n", x*y); 
+    char *matriz;
+    vulneravel(matriz, x, y, 'r');
+    printf("Terminou com sucesso\n");
 }
 ```
 Nesta *main* podemos ver que os valores de **x** e de **y** são os valores máximos que o tipo de dados *size_t* pode tomar. A multiplicação destes dois valores irá alcançar o *overflow de inteiros* inúmeras vezes e o resultado final será **1** (i.e. x\*y = 1). Seguindo a função *vulneravel*, irá ser alocado apenas 1 (x\*y) byte para a matriz sendo que os ciclos sobre **i** e **j** irão iterar várias vezes, o que irá provocar acessos a posições de memória muito além do que foi alocado para a matriz através da instrução *matriz[i\*y+j] = valor*.
