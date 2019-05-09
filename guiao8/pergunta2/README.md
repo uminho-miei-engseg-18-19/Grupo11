@@ -93,10 +93,8 @@ Como podemos verificar, a função *vulneravel* recebe como parâmetros um **x**
 ```c
 int main(int argc, char** argv) {
     size_t x=18446744073709551615, y=18446744073709551615;	
-    printf("x*y = %zu\n", x*y); 
     char *matriz;
     vulneravel(matriz, x, y, 'r');
-    printf("Terminou com sucesso\n");
 }
 ```
 Nesta *main* podemos ver que os valores de **x** e de **y** são os valores máximos que o tipo de dados *size_t* pode tomar. A multiplicação destes dois valores irá alcançar o *overflow de inteiros* inúmeras vezes e o resultado final será **1** (i.e. x\*y = 1). Seguindo a função *vulneravel*, irá ser alocado apenas 1 (x\*y) byte para a matriz sendo que os ciclos sobre **i** e **j** irão iterar várias vezes, o que irá provocar acessos a posições de memória muito além do que foi alocado para a matriz através da instrução *matriz[i\*y+j] = valor*.
