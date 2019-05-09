@@ -131,7 +131,7 @@ int main() {
 	vulneravel(origem, tam);
 }
 ```
-Para explorar a vulnerabilidade descrita acima é apenas chamar a função *vulneravel* com o parâmetro **tamanho** igual a 0. O conteúdo do parâmetro **origem** é irrelevante.
+Para explorar a vulnerabilidade descrita acima é apenas necessário chamar a função *vulneravel* com o parâmetro **tamanho** igual a 0. O conteúdo do parâmetro **origem** é irrelevante.
 
 
 **Ao executar dá algum erro? Qual?**
@@ -167,7 +167,7 @@ int main() {
 	vulneravel(origem, tam);
 }
 ```
-Para explorar a vulnerabilidade descrita acima é apenas chamar a função *vulneravel* com o parâmetro **tamanho** igual a 2147483649. O conteúdo do parâmetro **origem** é também irrelevante neste caso.
+Para explorar a vulnerabilidade descrita acima é apenas necessário chamar a função *vulneravel* com o parâmetro **tamanho** igual a 2147483649. O conteúdo do parâmetro **origem** é também irrelevante neste caso.
 
 
 **Ao executar dá algum erro? Qual?**
