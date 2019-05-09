@@ -102,11 +102,13 @@ int main(int argc, char** argv) {
 Nesta *main* podemos ver que os valores de **x** e de **y** são os valores máximos que o tipo de dados *size_t* pode tomar. A multiplicação destes dois valores irá alcançar o *overflow de inteiros* inúmeras vezes e o resultado final será **1** (i.e. x\*y = 1). Seguindo a função *vulneravel*, irá ser alocado apenas 1 (x\*y) byte para a matriz sendo que os ciclos sobre **i** e **j** irão iterar várias vezes, o que irá provocar acessos a posições de memória muito além do que foi alocado para a matriz através da instrução *matriz[i\*y+j] = valor*.
 
 **Ao executar dá algum erro? Qual?**
+
 Após executar o programa deparamo-nos com um erro de *segmentation fault*.
 
 
 ### Pergunta 2.2
-**Qual a vulnerabilidade que existe na função ***vulneravel* e quais os efeitos da mesma?**
+
+**Qual a vulnerabilidade que existe na função *vulneravel* e quais os efeitos da mesma?**
 ```c
 const int MAX_SIZE = 2048;
 
@@ -120,6 +122,7 @@ void vulneravel (char *origem, size_t tamanho) {
         }
 }
 ```
+Na função vulnerável apresentada, podemos verificar que é passado um parâmetro do tipo *size_t*. Como mencionado na alínea anterior, este tipo de dados apresenta valores na gama [0, 18.446.744.073.709.551.615]. A função *malloc* está contida dentro do *if* e apenas é executado se **tamanho < MAX_SIZE** tal que MAX_SIZE = 2048. Deste modo, não existe possibilidade de explorar *overflow de inteiros* para provocar um mau funcionamento da função *malloc*. Podemos também observar que tanto o parâmetro **tamanho** como a variável **tamanho_real** possuem o mesmo tipo de dados e, consequentemente, apresentam a mesma gama de valores possíveis, logo não é possível explorar diferenças entre diferentes tipos de dados. No entanto, se repararmos na primeira instrução dentro do condicional *if*, deparámo-nos com a atribuição *tamanho_real = tamanho - 1*. Olhando para a gama de valores que o parâmetro **tamanho** pode tomar ([0, 2.047]), podemos explorar o caso em que o valor do parâmetro é **zero** de modo a que o resultado desta instrução seja **tamanho_real = -1**. Como o tipo de dados da variável **tamanho_real** apenas pode tomar valores na gama [0, 18.446.744.073.709.551.615], dá-se um *overflow de inteiros* e o resultado efetivo da instrução anterior é **tamanho_real = 18446744073709551615**. Após tentar alocar uma quantidade de memória tão grande, a função *malloc* vai falhar a alocar memória para a variável **destino** e retornar um *null pointer*, o que vai fazer com que o programa termine inesperadamente e de forma errada após tentar executar a instrução seguinte (*memcpy(destino, origem, tamanho_real)*) dado que o apontador para o endereço de memória da variável **destino** é nulo.
 
 
 **Complete o main() de modo a demonstrar essa vulnerabilidade.**
@@ -130,21 +133,45 @@ int main() {
 	vulneravel(origem, tam);
 }
 ```
+Para explorar a vulnerabilidade descrita acima é apenas chamar a função *vulneravel* com o parâmetro **tamanho** igual a 0. O conteúdo do parâmetro **origem** é irrelevante.
+
 
 **Ao executar dá algum erro? Qual?**
+
 Após executar o programa deparamo-nos com um erro de *segmentation fault*.
 
 
-### Experiência 2.4
-**Qual a vulnerabilidade que existe na função ***vulneravel* e quais os efeitos da mesma?**
-```c
 
+### Experiência 2.4
+
+**Qual a vulnerabilidade que existe na função *vulneravel* e quais os efeitos da mesma?**
+```c
+void vulneravel (char *origem, size_t tamanho) {
+    int tamanho_real;
+    char *destino;
+    if (tamanho > 1) {
+        tamanho_real = tamanho - 1; // Não copiar \0 de origem para destino
+        if (tamanho_real < MAX_SIZE) {
+            destino = (char *) malloc(tamanho_real);
+            memcpy(destino, origem, tamanho_real);
+        }
+    }
+}
 ```
+Na função vulnerável apresentada, podemos verificar que é passado um parâmetro **tamanho** do tipo *size_t*. Como mencionado nas alíneas anteriores, este tipo de dados apresenta valores na gama [0, 18.446.744.073.709.551.615]. Olhando para o código podemos verificar que para se entrar no primeiro condicional *if(tamanho > 1)* o parâmetro **tamanho** tem de possuir um valor na gama [2, 18.446.744.073.709.551.615], ou seja, não é possível explorar o caso descrito na pergunta 2 de o valor do **tamanho** ser igual a zero. Contudo neste exemplo, e ao contrário do exemplo da pergunta 2, a variável **tamanho_real** é do tipo *int*, facto este que pode ser explorado de modo a obter valores negativos na variável **tamanho_real** para certos valores do parâmetro **tamanho**. Este é um caso particular de *overflow de inteiros* em que se explora o limite superior do tipo de dados *int*, cuja gama de valores é [-2.147.483.648, 2.147.483.647]. Imediatamente verificamos que se o parâmetro tamanho for 2.147.483.649, a condição do *if* externo vai se verificar e o valor que será atribuído à variável **tamanho_real** será de (2.147.483.649 - 1) que corresponde ao valor 2.147.483.648. Verificando a gama de valores do tipo de dados *int*, podemos concluir que estamos perante uma situação de *overflow de inteiros* pelo que o valor efetivo da variável **tamanho_real** será -2.147.483.648. Ora sendo este valor negativo, e respetivamente menor que **MAX_SIZE**, a função *malloc* será executada. Dado que esta função apenas recebe valores do tipo *size_t* como parâmetros, terá de ser feita a conversão inversa, de *int* para *size_t*, de tal forma que a instrução a ser executada será *destino = (char *) malloc(2.147.483.648)*. Concluindo, através deste processo é possível atravessar a barreira (**tamanho_real < MAX_SIZE**) e executar a função malloc com um parâmetro muito superior ao valor de **MAX_SIZE**. À semelhança da pergunta 2, após tentar alocar uma quantidade de memória tão grande, a função *malloc* vai falhar a alocar memória para a variável **destino** e retornar um *null pointer*, o que vai fazer com que o programa termine inesperadamente e de forma errada após tentar executar a instrução seguinte (*memcpy(destino, origem, tamanho_real)*) dado que o apontador para o endereço de memória da variável **destino** é nulo.
 
 
 **Complete o main() de modo a demonstrar essa vulnerabilidade.**
 ```c
-
+int main() {
+	char origem[6] = "Hello";
+	size_t tam = 2147483649;
+	vulneravel(origem, tam);
+}
 ```
+Para explorar a vulnerabilidade descrita acima é apenas chamar a função *vulneravel* com o parâmetro **tamanho** igual a 2147483649. O conteúdo do parâmetro **origem** é também irrelevante neste caso.
+
 
 **Ao executar dá algum erro? Qual?**
+
+Após executar o programa deparamo-nos com um erro de *segmentation fault*.
